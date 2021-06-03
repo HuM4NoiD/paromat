@@ -1,6 +1,8 @@
 from lexer import Lexer
+from node_parser import Parser
 
 exp = input("> ")
 lex = Lexer(exp)
 tokens = lex.generateTokens()
-print(list(tokens))
+parse = Parser(tokens)
+print(parse.parse())

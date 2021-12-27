@@ -69,7 +69,7 @@ class Lexer(
         }
 
         val numString = numberBuilder.toString();
-        return Operand(if (pointCount == 0) numString.toLong() else numString.toDouble())
+        return Operand(numString.toDouble())
     }
 
     companion object {
